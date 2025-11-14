@@ -4,47 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost and found</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
+<center>
 <body>
+<section id="mainsection">
+
     <header>
-        <h1> Welcome to Digital Campus LOST and FOUND portal</h1>
+        <h1><I>Digital Campus LOST and FOUND portal</I> </h1>
     </header>
     <nav>
         <ul>
-            <li><a href="#reportlostitem">Report Lost Item</a></li>
-            <li><a href="#reportfounditem">Report Found Item</a></li>
-            <li><a href="#searchitem">Search Items</a></li>
-            <li><a href="#contactForm">Contact Us</a></li>
-            <li><a href="#adminlogin"> Admin login</a></li>
+            <li><a href="#reportlostitem" id="lostbtn" onclick="show_reportlostitem()">Report Lost Item</a></li>
+            <li><a href="#reportfounditem" id="foundbtn" onclick="show_reportfounditem()">Report Found Item</a></li>
+            <li><a href="#searchitem" id="searchbtn" onclick="show_seacrh_login()">Search Items</a></li>
+            <li><a href="#contactForm" id="contactbtn" onclick="show_contact()">Contact Us</a></li>
+            <li><a href="#adminlogin" id="adminbtn" onclick="show_admin_login()"> Admin login</a></li>
         </ul>
+    
     </nav>
+</section>
         <main>
             <section id="reportlostitem" class="section">
                 <h2>Report Lost Item</h2>
                 <form id="lostItemForm">
                     <label for="lostItemName">Item Name:</label>
                     <input type="text" id="lostItemName" class="lostItemName" required>
-                    <br>
-                    <label for="category">Category:</label>
-                    <select id="category"required>
-                    <option value="">Select Category</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Bag">Bag</option>
-                    <option value="Wallet">Wallet</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Card">Card</option>
-                    <option value="Other">Other</option>
-                    <br>
                     <label for="lostItemDescription">Description:</label>
                     <textarea id="lostItemDescription" class="Description" required></textarea>
-                    <br>
                     <label for="lostItemDate">Date Lost:</label>
                     <input type="date" id="lostItemDate" class="lostItemDate" required>
-                    <br>
                     <label for="lostItemLocation">Location Lost:</label>
                     <input type="text" id="lostItemLocation" class="lostItemLocation" required>
-                    <br>
                     <label for="category">Category:</label>
                     <select id="category"required>
                     <option value="">Select Category</option>
@@ -54,7 +45,8 @@
                     <option value="Clothing">Clothing</option>
                     <option value="Card">Card</option>
                     <option value="Other">Other</option>
-                    <br>
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" class="image" accept="image/*">
                     <button type="submit">Submit</button>
                 </form>
             </section>
@@ -66,24 +58,31 @@
                     <br>
                     <label for="foundItemDescription">Description:</label>
                     <textarea id="foundItemDescription" class="Description" required></textarea>
-                    <br>
-                    <label for="foundItemDate">Date Lost:</label>
+                    <label for="foundItemDate">Date found:</label>
                     <input type="date" id="foundItemDate" class="foundItemDate" required>
-                    <br>
-                    <label for="foundItemLocation">Location Lost:</label>
+                    <label for="foundItemLocation">Location found:</label>
                     <input type="text" id="foundItemLocation" class="foundItemLocation" required>
-                    <br>
+                    <label for="category">Category:</label>
+                    <select id="category"required>
+                    <option value="">Select Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Bag">Bag</option>
+                    <option value="Wallet">Wallet</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Card">Card</option>
+                    <option value="Other">Other</option>
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" class="image" accept="image/*">
                     <button type="submit">Submit</button>
                 </form>
             </section>
+                 <form>
             <section id="searchitem" class="section">
                 <form id="searchItemForm">
                     <h2>Search Items</h2>
-                    <br>
-                    <label for="searchQuery">Search by Name or Description:</label>
+                    <label for="searchQuery" >Search by Name or Description:</label>
                     <textarea type="text" id="searchQuery" class="searchQuery" required>
                     </textarea>
-                    <br>
                     <button type="submit">Search</button>
                 </form>
             </section>
@@ -114,7 +113,7 @@
                     <button type="submit">Login</button>
                 </form>
             </section>
-            <section id="userresponses" class="section">
+            <section id="userResponses" class="section">
                 <h2>User Responses</h2>
                 <div>
                 </div>
@@ -122,10 +121,9 @@
                 
             </section>
 
-
-
         </main>
 
     <script src="index.js"></script>
-</body>
+    </body>
+</center>
 </html>
