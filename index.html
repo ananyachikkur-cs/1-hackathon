@@ -17,7 +17,6 @@
         <ul>
             <li><a href="#reportlostitem" id="lostbtn" onclick="show_reportlostitem()">Report Lost Item</a></li>
             <li><a href="#reportfounditem" id="foundbtn" onclick="show_reportfounditem()">Report Found Item</a></li>
-            <li><a href="#searchitem" id="searchbtn" onclick="show_seacrh_login()">Search Items</a></li>
             <li><a href="#contactForm" id="contactbtn" onclick="show_contact()">Contact Us</a></li>
             <li><a href="#adminlogin" id="adminbtn" onclick="show_admin_login()"> Admin login</a></li>
         </ul>
@@ -25,6 +24,12 @@
     </nav>
 </section>
         <main>
+            <section id="items" class="section">
+                <form id="ItemsForm">
+                    <h2>Items</h2>
+                    <label for="Query" > Name and Description of the items:</label>
+                </form>
+            </section>
             <section id="reportlostitem" class="section">
                 <h2>Report Lost Item</h2>
                 <form id="lostItemForm">
@@ -77,15 +82,7 @@
                 </form>
             </section>
                  <form>
-            <section id="searchitem" class="section">
-                <form id="searchItemForm">
-                    <h2>Search Items</h2>
-                    <label for="searchQuery" >Search by Name or Description:</label>
-                    <textarea type="text" id="searchQuery" class="searchQuery" required>
-                    </textarea>
-                    <button type="submit">Search</button>
-                </form>
-            </section>
+            
             <section id="contactus" class="section">
                 <h2>Contact Us</h2>
                 <form id="contactForm">
